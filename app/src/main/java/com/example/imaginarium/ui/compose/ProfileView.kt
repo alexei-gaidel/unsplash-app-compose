@@ -56,54 +56,49 @@ fun ProfileView(
     val results: LazyPagingItems<PhotoItem>? =
         username?.let { photoViewModel.pagingLikedPhotos(it).collectAsLazyPagingItems() }
 
-    LazyColumn(        verticalArrangement = Arrangement.spacedBy(3.dp),
+    LazyColumn(
+        verticalArrangement = Arrangement.spacedBy(3.dp),
         state = rememberLazyListState(),
         modifier = Modifier
             .fillMaxSize()
-            .padding(top = 5.dp)) {
-
+            .padding(top = 5.dp)
+    ) {
 
         if (user != null) {
 
-//            if (username != null) {
+            item { Header(user = user) }
+            if (results != null) {
+                items(results.itemCount)
+                { index ->
 
-                item { Header(user = user) }
-                if (results != null) {
-                    items(results.itemCount)
-                    { index ->
+                    results[index]?.let {
+                        LikedtItem(photoViewModel, it) {
+                            val id = results[index]?.id
+                            id?.let {
+                                photoViewModel.getSinglePhoto(id)
 
+                                val profileImage = results[index]?.user?.profileImage?.small
+                                if (profileImage != null) {
+                                    val encodedImage =
+                                        URLEncoder.encode(
+                                            profileImage,
+                                            StandardCharsets.UTF_8.toString()
+                                        )
+                                    navController.navigate(
+                                        DetailsScreen.SinglePhoto.route + "/$encodedImage"
+                                    ) {
 
-                        results[index]?.let {
-                            LikedtItem(photoViewModel, it) {
-                                val id = results[index]?.id
-                                id?.let {
-                                    photoViewModel.getSinglePhoto(id)
-
-                                    val profileImage = results[index]?.user?.profileImage?.small
-                                    if (profileImage != null) {
-                                        val encodedImage =
-                                            URLEncoder.encode(
-                                                profileImage,
-                                                StandardCharsets.UTF_8.toString()
-                                            )
-                                        navController.navigate(
-                                            DetailsScreen.SinglePhoto.route + "/$encodedImage"
-                                        ) {
-
-                                        }
                                     }
                                 }
                             }
                         }
                     }
+                }
             }
-//        }
-
+        }
     }
-
-
 }
-}
+
 @OptIn(ExperimentalGlideComposeApi::class)
 @Composable
 fun Header(user: UnsplashUser?) {
@@ -185,50 +180,6 @@ fun Header(user: UnsplashUser?) {
         )
     }
 }
-
-//@Composable
-//fun LikedPhotosList(
-//    photoViewModel: PhotoViewModel,
-//    navController: NavHostController,
-//    username: String
-//) {
-//
-////    val results: LazyPagingItems<PhotoItem> =
-////        photoViewModel.pagingLikedPhotos(username).collectAsLazyPagingItems()
-//
-//    LazyColumn(
-//        verticalArrangement = Arrangement.spacedBy(3.dp),
-//        state = rememberLazyListState(),
-//        modifier = Modifier
-//            .fillMaxSize()
-//            .padding(top = 5.dp)
-//    ) {
-//        items(results.itemCount)
-//        { index ->
-//
-//
-//            results[index]?.let {
-//                LikedtItem(photoViewModel, it) {
-//                    val id = results[index]?.id
-//                    id?.let {
-//                        photoViewModel.getSinglePhoto(id)
-//
-//                        val profileImage = results[index]?.user?.profileImage?.small
-//                        if (profileImage != null) {
-//                            val encodedImage =
-//                                URLEncoder.encode(profileImage, StandardCharsets.UTF_8.toString())
-//                            navController.navigate(
-//                                DetailsScreen.SinglePhoto.route + "/$encodedImage"
-//                            ) {
-//
-//                            }
-//                        }
-//                    }
-//                }
-//            }
-//        }
-//    }
-//}
 
 
 @OptIn(ExperimentalGlideComposeApi::class)
