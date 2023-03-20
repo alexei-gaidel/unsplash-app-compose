@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <plurals name="photo_plurals">
+        <item quantity="one" tools:ignore="ImpliedQuantity">фотография</item>
+        <item quantity="few">фотографии</item>
+        <item quantity="many">фотографий</item>
+        <item quantity="other">фотографий</item>
+    </plurals>
+    <string name="app_name">Imaginarium</string>
+    <string name="get_photolist_error">При загрузке фотографий возникла ошибка</string>
+    <string name="get_single_photo_error">При загрузке фотографии возникла ошибка</string>
+    <string name="get_user_error">При загрузке данных пользователя возникла ошибка</string>
+    <string name="auth_canceled">При авторизации возникла ошибка</string>
+    <string name="profile">ПРОФИЛЬ</string>
+    <string name="favorite">ИЗБРАННОЕ</string>
+    <string name="photo">ФОТО</string>
+    <string name="collections">КОЛЛЕКЦИИ</string>
+    <string name="collection">КОЛЛЕКЦИЯ</string>
+    <string name="todays_top">СЕГОДНЯ В ТОПЕ</string>
+    <string name="downloading_file_finished">Скачивание файла завершено</string>
+    <string name="download_starting">Файл скачивается</string>
+    <string name="download_failed">При скачивании возникла ошибка</string>
+    <string name="permission_needed_to_download">Для скачивания требуется разрешение</string>
+    <string name="made_with">"Снято на: "</string>
+    <string name="model">"Модель: "</string>
+    <string name="exposure">"Экспозиция: "</string>
+    <string name="aperture">"Апертура: "</string>
+    <string name="focal_length">"Фокусное расстояние: "</string>
+    <string name="iso">"ISO: "</string>
+    <string name="about">О @</string>
+    <string name="downloads">Скачиваний</string>
+    <string name="download_finished">Скачивание завершено</string>
+    <string name="open_image">Открыть</string>
+    <string name="share_with">Поделиться через</string>
+    <string name="by">от</string>
+    <string name="search_results">Результаты поиска</string>
+    <string name="search_here">Искать...</string>
+    <string name="no_location_data_found">Данные геолокации не найдены</string>
+    <string name="liked">Понравившиеся фотографии:</string>
+    <string name="onboarding_text_one">Откройте мир высококачественной фотографии</string>
+    <string name="onboarding_text_two">" Делайте снимки, делитесь с друзьями, создавайте коллекции"</string>
+    <string name="onboarding_text_three">Загружайте любимые фотографии и отслеживайте статистику</string>
+    <string name="skip">Пропустить</string>
+    <string name="login_with_unsplash">Войти через Unsplash</string>
+    <string name="logout">ВЫХОД</string>
+    <string name="really_log_out">Откроется главная страница  Unsplash, для повторного входа закройте ее.</string>
+    <string name="yes">Уйти</string>
+    <string name="no">Остаться</string>
+    <string name="successfully_logged_out">Вы успешно вышли из профиля</string>
+    <string name="return_to_imaginarium">Вернуться в  Imaginarium</string>
+    <string name="no_data_found">Данные не найдены, проверьте интернет-соединение</string>
+</resources>

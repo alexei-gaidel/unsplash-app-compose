@@ -1,0 +1,47 @@
+<resources>
+    <plurals name="photo_plurals">
+        <item quantity="zero">photos</item>
+        <item quantity="one">photo</item>
+        <item quantity="two">photos</item>
+        <item quantity="few">photos</item>
+        <item quantity="many">photos</item>
+        <item quantity="other">photos</item>
+    </plurals>
+    <string name="app_name">Imaginarium</string>
+    <string name="get_photolist_error">Loading photos failed</string>
+    <string name="get_single_photo_error">Loading photo details failed</string>
+    <string name="get_user_error">Loading user data failed</string>
+    <string name="auth_canceled">Authorization failed</string>
+    <string name="profile">PROFILE</string>
+    <string name="favorite">FAVORITE</string>
+    <string name="photo">PHOTO</string>
+    <string name="collections">COLLECTIONS</string>
+    <string name="collection">COLLECTION</string>
+    <string name="todays_top">TODAY\'S TOP</string>
+    <string name="downloading_file_finished">File download finished</string>
+    <string name="download_starting">Download starting</string>
+    <string name="download_failed">Download failed</string>
+    <string name="permission_needed_to_download">Permission needed to start downloading</string>
+    <string name="made_with">Made with: </string>
+    <string name="model">Model: </string>
+    <string name="exposure">Exposure: </string>
+    <string name="aperture">Aperture: </string>
+    <string name="focal_length">Focal length: </string>
+    <string name="iso">ISO: </string>
+    <string name="about">About @</string>
+    <string name="downloads">Downloads</string>
+    <string name="download_finished">Download finished</string>
+    <string name="open_image">Open image</string>
+    <string name="share_with">Share With</string>
+    <string name="by">by</string>
+    <string name="search_here">Search here...</string>
+    <string name="search_results">Search Results</string>
+    <string name="no_location_data_found">No location data found</string>
+    <string name="liked">Favorite photos: </string>
+    <string name="onboarding_text_one">Discover the world’s premier community for HD photography</string>
+    <string name="onboarding_text_two"> Take pictures, share with friends, create collections</string>
+    <string name="onboarding_text_three">Upload your favorite photos and track statistics</string>
+    <string name="skip">Skip</string>
+    <string name="login_with_unsplash">Login with Unsplash</string>
+
+</resources>
